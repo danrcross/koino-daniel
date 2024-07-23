@@ -1,0 +1,548 @@
+@font-face {
+  font-family: Yrsa;
+  src: url("./assets/fonts/Yrsa.ttf") format("truetype");
+}
+
+:root {
+  --light-orange: #fcd19c;
+  --green: #028e2c;
+  --blue: #0d99ff;
+  --red: #f24823;
+  --font-serif: Yrsa, serif;
+  --font-sans: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  max-width: 60em;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--light-orange);
+  overflow: auto;
+}
+
+body {
+  background-color: var(--light-orange);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header component */
+
+.headerComp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1em;
+}
+
+.backLink {
+  color: black;
+}
+.backLink:hover {
+  color: white;
+  cursor: pointer;
+}
+.logoutLink {
+  color: var(--red);
+}
+.logoutLink:hover {
+  color: white;
+  cursor: pointer;
+}
+.headerCompHome {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  a {
+    padding: 0.2em;
+    font-size: 0.8em;
+    padding-bottom: 1em;
+  }
+}
+
+.pageTitle {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 1.8em;
+  margin-bottom: 0.7em;
+  margin-top: 0.2em;
+  color: black;
+}
+
+/* DataBar component */
+
+.dataBar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  color: white;
+  font-family: var(--font-serif);
+  justify-content: space-around;
+  padding: 0.2em 0.8em;
+  border-radius: 1.7em;
+  width: 95%;
+}
+
+.dbSet {
+  display: flex;
+  flex-direction: column;
+}
+
+.dbHeader {
+  padding: 0;
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: 300;
+}
+.dbVal {
+  font-size: 2.5em;
+  padding: 0em;
+  margin: -0.2em 0em;
+}
+
+/* ListButton component */
+
+.lbContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  button {
+    background-color: var(--light-orange);
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 1.5em;
+    padding-top: 0.4em;
+    padding-bottom: 0.2em;
+    padding-left: 2em;
+  }
+}
+
+.lbContainerAfter {
+  margin-top: 0;
+  button {
+    padding-top: 0;
+  }
+}
+/* Footer component */
+
+.footerComp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.blackLink {
+  color: black;
+}
+.blackLink:hover {
+  color: white;
+  cursor: pointer;
+}
+.greenLink {
+  color: var(--green);
+}
+.greenLink:hover {
+  color: white;
+  cursor: pointer;
+}
+.redLink {
+  color: var(--red);
+}
+.redLink:hover {
+  color: white;
+  cursor: pointer;
+}
+/* SellerBox component */
+
+.sellerBoxFlex {
+  display: flex;
+  flex-direction: row;
+  height: 13em;
+  background-color: black;
+  color: white;
+  font-family: var(--font-serif);
+}
+
+.sbProPic {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* MyCommunities component */
+
+/* MyProducts, MyCommunities, OtherCommunities, Watchlist components */
+.itemsList {
+  font-family: var(--font-serif);
+  display: flex;
+  flex-direction: column;
+  margin: 0em 1.5em;
+}
+
+/* Organized by hierarchy (parents->children) */
+/* PARENT */
+.itemSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.6em;
+  width: 100%;
+}
+/* CHILDREN of .prodSection */
+.itemCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  background-color: black;
+  border-radius: 0.7em;
+  text-decoration: none;
+  color: white;
+  text-align: left;
+  white-space: nowrap;
+
+  li {
+    list-style-type: none;
+  }
+}
+.itemData {
+  padding-left: 1em;
+  h4 {
+    padding-left: 1em;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+  }
+}
+
+.itemDataList {
+  padding-left: 0;
+  h4 {
+    padding-right: 1em;
+  }
+}
+
+.itemListItem {
+  font-weight: 400;
+}
+.itemProp {
+  font-weight: 700;
+}
+.itemOptions {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemImgDiv {
+  img {
+    height: auto;
+    margin: 1em;
+    margin-left: 5em;
+    border-radius: 0.5em;
+    width: 14em;
+  }
+}
+
+.itemDeleteBtn {
+  background-color: var(--red);
+  border: 0.2em solid var(--red);
+  padding: 0.3em;
+  margin: 0.2em 0.2em;
+}
+.itemDeleteBtn:hover {
+  border: 0.2em solid black;
+}
+
+.itemRemoveBtn {
+  background-color: var(--red);
+  border: 0.2em solid var(--red);
+  padding: 0.3em;
+  margin: 0.2em 0.2em;
+}
+.itemRemoveBtn:hover {
+  border: 0.2em solid black;
+}
+.itemEditBtn {
+  background-color: var(--blue);
+  border: 0.2em solid var(--blue);
+  padding: 0.3em;
+  margin: 0.2em 0.2em;
+}
+.itemEditBtn:hover {
+  border: 0.2em solid black;
+}
+
+/* Radix Icons */
+.optIcon {
+  color: white;
+  width: 1.3em;
+  height: 1.3em;
+  margin-bottom: -0.4em;
+}
+
+/* Separate from above PARENT */
+.btnsDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 93%;
+}
+
+.underListBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.blackMoreBtn {
+  background-color: black;
+  color: white;
+  width: 49%;
+  border-radius: 0.2em;
+}
+.grayMoreBtn {
+  background-color: gray;
+  color: white;
+  width: 49%;
+  border-radius: 0.2em;
+}
+
+.grayMoreBtn:hover {
+  cursor: default;
+  border: none;
+}
+.grayMoreBtn:not(:hover) {
+  cursor: default;
+  border: none;
+}
+
+/* LoginPage.jsx page, SignupPage.jsx*/
+
+.loginPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.topDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.appHeader {
+  display: flex;
+  justify-content: left;
+}
+
+.agoraImgJpg {
+  height: 14em;
+  width: 14em;
+  text-align: center;
+  object-fit: cover;
+  border-radius: 100%;
+}
+.staticHeader {
+  font-family: var(--font-serif);
+  font-weight: 450;
+}
+
+.logFormLabel {
+  font-size: 1em;
+  font-weight: 550;
+}
+.inputField {
+  border: none;
+  height: 2.5em;
+  width: 20em;
+  background-color: white;
+  margin-bottom: 2em;
+  border-radius: 0.2em;
+  padding-left: 1em;
+}
+
+.formDiv {
+  text-align: left;
+  margin-top: 2.5em;
+}
+
+.loginBtn {
+  background-color: var(--blue);
+  border: none;
+  color: white;
+  height: 2.5em;
+  width: 100%;
+  margin-bottom: 3em;
+  font-weight: 600;
+}
+
+/* more SignupPage.jsx */
+.signupBtn {
+  background-color: var(--blue);
+  border: none;
+  color: white;
+  height: 2.5em;
+  width: 100%;
+  margin-bottom: 3em;
+  font-weight: 600;
+}
+/* HomePage.jsx page */
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+}
+
+.topBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilePicHome {
+  margin: 1em 0em;
+  width: 13em;
+  height: 13em;
+  margin-top: 1.8em;
+}
+/* Settings page */
+
+.settingsPage {
+  display: flex;
+  flex-direction: column;
+}
+.settingsDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+.proPicBox {
+  margin: 1.7em 0em;
+  display: flex;
+  flex-direction: row;
+}
+.profilePic {
+  margin: 1em 0em;
+  width: 13em;
+  height: 13em;
+}
+
+.proPicForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inputAndSave {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Join Community Page */
+.joinCommPage {
+  display: flex;
+  flex-direction: column;
+}
+
+/* SingleCommunityPage */
+
+.imgAndDesc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 14em;
+}
+
+.commImg {
+  max-height: 14em;
+  width: auto;
+}
+
+/* NewProductPage & NewCommunityPage*/
+.newItemPage {
+  display: flex;
+  flex-direction: column;
+}
+.newItemDiv {
+  display: flex;
+  flex-direction: column;
+}
+.newItemForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.newItemLabel {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin-left: 2em;
+  text-align: left;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.itemPicBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 23em;
+  margin: 0 2em;
+  margin-top: 0.2em;
+  margin-bottom: 0.8em;
+  padding: 1.7em;
+  border-radius: 2em;
+  background-color: black;
+  color: white;
+}
+.itemPic {
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+}
+
+.itemPicForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.inputWrapper {
+  margin: 2em;
+  margin-top: 0.2em;
+  padding: 1.5em;
+  border-radius: 2.5em;
+  background-color: black;
+  color: white;
+}
+
+.itemInputShort {
+  height: 2em;
+  border-radius: 0.2em;
+  border: none;
+}
+.itemInputLong {
+  height: 2em;
+  width: 90%;
+  border-radius: 0.2em;
+  border: none;
+}
+
+.submitBtn {
+  margin: 0 5em;
+  margin-bottom: 5em;
+  background-color: var(--green);
+  color: white;
+  padding: 0.6em;
+  border: none;
+  border-radius: 0.2em;
+}
